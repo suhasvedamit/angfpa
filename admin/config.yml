@@ -1,13 +1,11 @@
-local_backend: true
-
 backend:
   name: github
   repo: suhasvedamit/angfpa_webapp
   branch: main
-  app_id: Ov23li6mPN6ZRHqpSdrG
+  app_id: YOUR_GITHUB_OAUTH_CLIENT_ID
 
 media_folder: "public/images"
-public_folder: "/images"
+public_folder: "/angfpa/images"
 
 collections:
   - name: "site-settings"
