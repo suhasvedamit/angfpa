@@ -2,7 +2,7 @@ backend:
   name: github
   repo: suhasvedamit/angfpa_webapp
   branch: main
-  app_id: YOUR_GITHUB_OAUTH_CLIENT_ID
+  app_id: Ov23li6mPN6ZRHqpSdrG
 
 media_folder: "public/images"
 public_folder: "/angfpa/images"
