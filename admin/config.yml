@@ -1,0 +1,341 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: suhasvedamit/angfpa_webapp
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "site-settings"
+    label: "Site Settings"
+    format: "json"
+    files:
+      - name: "site"
+        label: "Company & Contact Info"
+        file: "src/content/settings/site.json"
+        fields:
+          - label: "Company Name"
+            name: "companyName"
+            widget: "string"
+
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+            hint: "Upload your company logo image"
+
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+
+          - label: "Top Bar Message"
+            name: "topBarMessage"
+            widget: "string"
+
+          - label: "Phone Number"
+            name: "phone"
+            widget: "string"
+
+          - label: "Email"
+            name: "email"
+            widget: "string"
+
+          - label: "WhatsApp Number"
+            name: "whatsappNumber"
+            widget: "string"
+            hint: "Country code + number, no spaces (e.g. 919892345678)"
+
+          - label: "Office Address"
+            name: "address"
+            widget: "string"
+
+          - label: "Registered Address"
+            name: "registeredAddress"
+            widget: "string"
+
+          - label: "Business Hours"
+            name: "businessHours"
+            widget: "text"
+
+          - label: "Google Maps Embed URL"
+            name: "mapEmbedUrl"
+            widget: "string"
+
+          - label: "Footer Description"
+            name: "footerDescription"
+            widget: "text"
+
+          - label: "CTA Section Title"
+            name: "ctaTitle"
+            widget: "string"
+
+      - name: "home"
+        label: "Home Page"
+        file: "src/content/settings/home.json"
+        fields:
+          - label: "Hero Slider"
+            name: "heroSlides"
+            widget: "list"
+            min: 1
+            max: 6
+            fields:
+              - label: "Subtitle"
+                name: "subtitle"
+                widget: "string"
+                hint: "Small text above the heading (e.g. 'Reliable Fire Detection Systems')"
+
+              - label: "Heading"
+                name: "heading"
+                widget: "string"
+                hint: "Main heading for this slide"
+
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                hint: "Supporting text below the heading"
+
+              - label: "Background Image"
+                name: "image"
+                widget: "image"
+                required: false
+                media_folder: "/public/images/hero"
+                public_folder: "/images/hero"
+                hint: "Background image for this slide (recommended: 1920x800px)"
+
+              - label: "CTA Button 1 - Text"
+                name: "cta1Text"
+                widget: "string"
+
+              - label: "CTA Button 1 - Link"
+                name: "cta1Link"
+                widget: "string"
+                hint: "e.g. /products/"
+
+              - label: "CTA Button 2 - Text"
+                name: "cta2Text"
+                widget: "string"
+
+              - label: "CTA Button 2 - Link"
+                name: "cta2Link"
+                widget: "string"
+                hint: "e.g. /contact/"
+
+          - label: "Why Choose Us - Title"
+            name: "whyChooseUsTitle"
+            widget: "string"
+
+          - label: "Why Choose Us - Subtitle"
+            name: "whyChooseUsSubtitle"
+            widget: "string"
+
+          - label: "Why Choose Us - Cards"
+            name: "whyChooseUsCards"
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - label: "Number"
+                name: "number"
+                widget: "number"
+                value_type: "int"
+              - label: "Label"
+                name: "label"
+                widget: "string"
+
+          - label: "Customer Reviews - Section Title"
+            name: "reviewsSectionTitle"
+            widget: "string"
+            default: "What Our Clients Say"
+
+          - label: "Customer Reviews - Section Subtitle"
+            name: "reviewsSectionSubtitle"
+            widget: "string"
+            default: "Trusted by leading builders, contractors, and facility managers across Maharashtra"
+
+          - label: "Customer Reviews"
+            name: "reviews"
+            widget: "list"
+            min: 1
+            max: 10
+            fields:
+              - label: "Reviewer Name"
+                name: "name"
+                widget: "string"
+
+              - label: "Designation"
+                name: "designation"
+                widget: "string"
+                hint: "e.g. Project Manager, Safety Officer"
+
+              - label: "Company"
+                name: "company"
+                widget: "string"
+
+              - label: "Rating"
+                name: "rating"
+                widget: "number"
+                value_type: "int"
+                min: 1
+                max: 5
+                default: 5
+                hint: "Star rating from 1 to 5"
+
+              - label: "Review Text"
+                name: "review"
+                widget: "text"
+                hint: "The customer's testimonial/review"
+
+      - name: "about"
+        label: "About Page"
+        file: "src/content/settings/about.json"
+        fields:
+          - label: "Intro - Super Title"
+            name: "introSuperTitle"
+            widget: "string"
+
+          - label: "Intro - Heading"
+            name: "introHeading"
+            widget: "string"
+
+          - label: "Intro - Paragraph 1"
+            name: "introParagraph1"
+            widget: "text"
+
+          - label: "Intro - Paragraph 2"
+            name: "introParagraph2"
+            widget: "text"
+
+          - label: "Badges"
+            name: "badges"
+            widget: "list"
+            field:
+              label: "Badge"
+              name: "badge"
+              widget: "string"
+
+          - label: "Mission Title"
+            name: "missionTitle"
+            widget: "string"
+
+          - label: "Mission Text"
+            name: "missionText"
+            widget: "text"
+
+          - label: "Vision Title"
+            name: "visionTitle"
+            widget: "string"
+
+          - label: "Vision Text"
+            name: "visionText"
+            widget: "text"
+
+          - label: "Milestones"
+            name: "milestones"
+            widget: "list"
+            fields:
+              - label: "Year"
+                name: "year"
+                widget: "string"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+
+  - name: "categories"
+    label: "Categories"
+    folder: "src/content/categories"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    sortable_fields: ["order", "title"]
+    identifier_field: "title"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "Display name e.g. Fire Alarm Control Panels"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Display Order"
+        name: "order"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        hint: "Lower number = appears first"
+
+      - label: "Category Image"
+        name: "image"
+        widget: "image"
+        required: false
+        default: "/images/products/placeholder.svg"
+        hint: "Representative image for this category"
+
+  - name: "products"
+    label: "Products"
+    folder: "src/content/products"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Product Image"
+        name: "image"
+        widget: "image"
+        required: false
+        default: "/images/products/placeholder.svg"
+
+      - label: "Category"
+        name: "categorySlug"
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["title"]
+        value_field: "{{slug}}"
+        display_fields: ["title"]
+
+      - label: "Price"
+        name: "price"
+        widget: "string"
+        required: false
+        hint: "e.g. ₹6,500/Piece"
+
+      - label: "Minimum Order"
+        name: "minOrder"
+        widget: "string"
+        required: false
+        hint: "e.g. 1 Piece"
+
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        required: false
+        field:
+          label: "Feature"
+          name: "feature"
+          widget: "string"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
