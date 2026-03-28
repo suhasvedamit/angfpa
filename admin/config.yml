@@ -4,10 +4,9 @@ backend:
   name: github
   repo: suhasvedamit/angfpa_webapp
   branch: main
-  app_id: Ov23li6mPN6ZRHqpSdrG
 
 media_folder: "public/images"
-public_folder: "/angfpa/images"
+public_folder: "/images"
 
 collections:
   - name: "site-settings"
@@ -102,7 +101,7 @@ collections:
                 widget: "image"
                 required: false
                 media_folder: "/public/images/hero"
-                public_folder: "/angfpa/images/hero"
+                public_folder: "/images/hero"
                 hint: "Background image for this slide (recommended: 1920x800px)"
 
               - label: "CTA Button 1 - Text"
