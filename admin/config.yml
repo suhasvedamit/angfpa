@@ -5,7 +5,7 @@ backend:
   repo: suhasvedamit/angfpa_webapp
   branch: main
   # app_id: Ov23li6mPN6ZRHqpSdrG
-  base_url: http://angfpa.xo.je
+  base_url: https://angfpa.xo.je 
   auth_endpoint: index.php
 
 
