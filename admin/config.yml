@@ -5,6 +5,7 @@ backend:
   repo: suhasvedamit/angfpa_webapp
   branch: main
   app_id: Ov23li6mPN6ZRHqpSdrG
+  client_id: Ov23li6mPN6ZRHqpSdrG
   auth_endpoint: /oauth/authorize
 
 media_folder: "public/images"
