@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /angfpa/
-
-Sitemap: https://www.angfpa.com/angfpa/sitemap.xml
