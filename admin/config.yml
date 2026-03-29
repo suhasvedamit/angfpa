@@ -9,8 +9,8 @@ backend:
   auth_endpoint: index.php
 
 
-media_folder: "public/images"
-public_folder: "/images"
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "site-settings"
@@ -28,6 +28,8 @@ collections:
           - label: "Logo"
             name: "logo"
             widget: "image"
+            media_folder: "public/images/site"
+            public_folder: "/images/site"
             hint: "Upload your company logo image"
 
           - label: "Tagline"
@@ -104,7 +106,7 @@ collections:
                 name: "image"
                 widget: "image"
                 required: false
-                media_folder: "/public/images/hero"
+                media_folder: "public/images/hero"
                 public_folder: "/images/hero"
                 hint: "Background image for this slide (recommended: 1920x800px)"
 
@@ -287,6 +289,8 @@ collections:
         name: "image"
         widget: "image"
         required: false
+        media_folder: "public/images/categories"
+        public_folder: "/images/categories"
         default: "/images/products/placeholder.svg"
         hint: "Representative image for this category"
 
@@ -309,6 +313,8 @@ collections:
         name: "image"
         widget: "image"
         required: false
+        media_folder: "public/images/products"
+        public_folder: "/images/products"
         default: "/images/products/placeholder.svg"
 
       - label: "Category"
