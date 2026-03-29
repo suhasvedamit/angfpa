@@ -1,4 +1,5 @@
 # local_backend: true
+# public_folder paths must include Astro `base` (see astro.config.mjs) so CMS <img> previews resolve on GitHub Pages / subpath deploys.
 
 backend:
   name: github
@@ -8,9 +9,10 @@ backend:
   base_url: https://angfpa.xo.je
   auth_endpoint: index.php
 
+site_url: https://suhasvedamit.github.io/angfpa
 
 media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+public_folder: "/angfpa/images/uploads"
 
 collections:
   - name: "site-settings"
@@ -29,7 +31,7 @@ collections:
             name: "logo"
             widget: "image"
             media_folder: "public/images/site"
-            public_folder: "/images/site"
+            public_folder: "/angfpa/images/site"
             hint: "Upload your company logo image"
 
           - label: "Tagline"
@@ -107,7 +109,7 @@ collections:
                 widget: "image"
                 required: false
                 media_folder: "public/images/hero"
-                public_folder: "/images/hero"
+                public_folder: "/angfpa/images/hero"
                 hint: "Background image for this slide (recommended: 1920x800px)"
 
               - label: "CTA Button 1 - Text"
@@ -290,8 +292,8 @@ collections:
         widget: "image"
         required: false
         media_folder: "public/images/categories"
-        public_folder: "/images/categories"
-        default: "/images/products/placeholder.svg"
+        public_folder: "/angfpa/images/categories"
+        default: "/angfpa/images/products/placeholder.svg"
         hint: "Representative image for this category"
 
   - name: "products"
@@ -314,8 +316,8 @@ collections:
         widget: "image"
         required: false
         media_folder: "public/images/products"
-        public_folder: "/images/products"
-        default: "/images/products/placeholder.svg"
+        public_folder: "/angfpa/images/products"
+        default: "/angfpa/images/products/placeholder.svg"
 
       - label: "Category"
         name: "categorySlug"
