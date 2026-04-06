@@ -23,6 +23,16 @@ collections:
         label: "Company & Contact Info"
         file: "src/content/settings/site.json"
         fields:
+          - label: "Site name (short brand)"
+            name: "siteName"
+            widget: "string"
+            hint: "Used in page titles, Open Graph site name, hero label, and CMS admin title"
+
+          - label: "Default homepage SEO title"
+            name: "defaultSeoTitle"
+            widget: "string"
+            hint: "Full <title> for the home page (e.g. Brand - keywords)"
+
           - label: "Company Name"
             name: "companyName"
             widget: "string"
